@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>With love and gratitude</title>
+  <style>
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      padding:20px; max-width:720px; margin:0 auto; color:#111;
+    }
+    .card{
+      background:#fff; border-radius:10px; padding:20px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.06);
+    }
+    img{width:100%; height:auto; border-radius:8px; margin-bottom:12px;}
+    pre{
+      white-space:pre-wrap; background:#f7f7f7; padding:12px;
+      border-radius:6px; font-size:17px;
+    }
+    .btn{
+      display:inline-block; margin-top:12px; padding:14px 18px;
+      background:#0066cc; color:#fff; text-decoration:none;
+      border-radius:8px; font-weight:600; font-size:17px;
+    }
+    .muted{
+      color:#666; font-size:14px; margin-top:10px;
+    }
+    footer{
+      margin-top:30px; font-size:13px; color:#777; text-align:center;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>With love and gratitude</h2>
+
+    <!-- Image must be added to the repo as: payment_image.png -->
+    <img src="payment_image.png" alt="image" />
+
+    <pre>With love and gratitude</pre>
+
+    <!-- UPI link -->
+    <a class="btn"
+       href="upi://pay?pa=AA@okhdfcbank&pn=PAVILION&tn=With%20love%20and%20gratitude&cu=INR">
+       Pay via UPI
+    </a>
+
+    <div class="muted">
+      If UPI does not open automatically, copy this and paste into your UPI app:<br/>
+      <code>upi://pay?pa=AA@okhdfcbank&pn=PAVILION&tn=With%20love%20and%20gratitude&cu=INR</code>
+    </div>
+  </div>
+
+  <footer>Powered by GitHub Pages</footer>
+</body>
+</html>
