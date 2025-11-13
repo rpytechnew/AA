@@ -1,58 +1,94 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>With love and gratitude</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A and A – QR Code Details</title>
   <style>
-    body{
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      padding:20px; max-width:720px; margin:0 auto; color:#111;
+    body {
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(135deg, #ffe5b4 0%, #ffd1a1 50%, #fff0dc 100%);
+      color: #3a2e1f;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
     }
-    .card{
-      background:#fff; border-radius:10px; padding:20px;
-      box-shadow:0 6px 18px rgba(0,0,0,0.06);
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      background: #ffffffcc;
+      backdrop-filter: blur(6px);
+      border-radius: 18px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+      padding: 50px 60px;
     }
-    img{width:100%; height:auto; border-radius:8px; margin-bottom:12px;}
-    pre{
-      white-space:pre-wrap; background:#f7f7f7; padding:12px;
-      border-radius:6px; font-size:17px;
+    h1, h2 {
+      text-align: center;
+      color: #a15c00;
     }
-    .btn{
-      display:inline-block; margin-top:12px; padding:14px 18px;
-      background:#0066cc; color:#fff; text-decoration:none;
-      border-radius:8px; font-weight:600; font-size:17px;
+    p {
+      margin: 0.6em 0;
     }
-    .muted{
-      color:#666; font-size:14px; margin-top:10px;
+    .image-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      margin: 30px 0;
+      flex-wrap: wrap;
     }
-    footer{
-      margin-top:30px; font-size:13px; color:#777; text-align:center;
+    .image-row img {
+      width: 300px;
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      border: 3px solid #ffe5b4;
+    }
+    .trust-info {
+      background: #fff7ec;
+      padding: 20px;
+      border-left: 6px solid #ffaf50;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #8b6b3d;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <div class="card">
+  <div class="container">
+  
+	<div class="image-row">
+      <img src="A.png" alt="QR Code A">
+      <img src="B.png" alt="QR Code B">
+    </div>
+	
+    <h1>Aradhana and Arvind</h1>
     <h2>With love and gratitude</h2>
 
-    <!-- Image must be added to the repo as: payment_image.png -->
-    <img src="payment_image.png" alt="image" />
+    <p>Your presence is our greatest gift.</p>
+    <p>We humbly request no gifts or bouquets. Should you wish to extend your love, we’d be grateful for your contribution towards a cause close to our hearts.</p>
 
-    <pre>With love and gratitude</pre>
+    
 
-    <!-- UPI link -->
-    <a class="btn"
-       href="upi://pay?pa=AA@okhdfcbank&pn=PAVILION&tn=With%20love%20and%20gratitude&cu=INR">
-       Pay via UPI
-    </a>
+    <h2>Niravi Public Charitable Trust</h2>
+    <p>Founded by A in 2019, <strong>Niravi</strong> works towards bridging inequities and empowering marginalised communities to thrive and lead change.</p>
+    <p>Over the years, Niravi has supported underprivileged rural schools with better infrastructure, provided ration and health support to tribal and slum communities, and led health awareness and Covid-19 relief efforts that reached over 5 lakh people across 15 cities in India through a network of 250 volunteers.</p>
+    <p>Going forward, Niravi aims to focus on sustainable rural education transformation — creating lasting impact by strengthening learning environments and community participation.</p>
 
-    <div class="muted">
-      If UPI does not open automatically, copy this and paste into your UPI app:<br/>
-      <code>upi://pay?pa=AA@okhdfcbank&pn=PAVILION&tn=With%20love%20and%20gratitude&cu=INR</code>
+    <div class="trust-info">
+      <p><strong>Name:</strong> Niravi Public Charitable Trust</p>
+      <p><strong>Bank:</strong> ICICI Bank</p>
+      <p><strong>Branch:</strong> Puducherry IG square Branch</p>
+      <p><strong>Account No:</strong>623305035091</p>
+      <p><strong>IFSC:</strong> ICIC0006233</p>
     </div>
-  </div>
 
-  <footer>Powered by NIRAVI </footer>
+    <footer>© Niravi Public Charitable Trust – With gratitude and hope</footer>
+  </div>
 </body>
 </html>
-
