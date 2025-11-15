@@ -1,94 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A and A – QR Code Details</title>
-  <style>
-    body {
-      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      background: linear-gradient(135deg, #ffe5b4 0%, #ffd1a1 50%, #fff0dc 100%);
-      color: #3a2e1f;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 800px;
-      margin: 60px auto;
-      background: #ffffffcc;
-      backdrop-filter: blur(6px);
-      border-radius: 18px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-      padding: 50px 60px;
-    }
-    h1, h2 {
-      text-align: center;
-      color: #a15c00;
-    }
-    p {
-      margin: 0.6em 0;
-    }
-    .image-row {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 24px;
-      margin: 30px 0;
-      flex-wrap: wrap;
-    }
-    .image-row img {
-      width: 300px;
-      max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      border: 3px solid #ffe5b4;
-    }
-    .trust-info {
-      background: #fff7ec;
-      padding: 20px;
-      border-left: 6px solid #ffaf50;
-      border-radius: 10px;
-      margin-top: 20px;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #8b6b3d;
-      margin-top: 40px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A and A</title>
+
+<style>
+  body {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe5b4 0%, #ffd1a1 50%, #fff0dc 100%);
+    color: #3a2e1f;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+  }
+  
+   /* GOLD DIVIDER */
+  .divider {
+    height: 2px;
+    width: 70%;
+    margin: 25px auto;
+    background: linear-gradient(90deg, #d5a555, #f9e4b7, #d5a555);
+    border-radius: 2px;
+  }
+
+  /* GOLD GRADIENT BORDER FRAME */
+  .container {
+    max-width: 1000px;
+    margin: 60px auto;
+    background: #ffffffee;
+    backdrop-filter: blur(6px);
+
+    border: 12px solid;
+    border-image: linear-gradient(135deg, #e3b874, #f8e9c0, #d6a85a) 1; 
+    border-radius: 28px;
+
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    padding: 55px 60px;
+    position: relative;
+  }
+
+  /* MONOGRAM 
+  .monogram {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    background: linear-gradient(135deg, #b57a1a, #e8c27c, #b57a1a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Georgia", serif;
+    letter-spacing: 3px;
+  }
+  */
+  /* A.png */
+  .top-image {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .top-image img {
+    width: 200px;
+    border-radius: 14px;
+    border: 3px solid #f9d7a6;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  }
+
+  /* TWO-COLUMN BLOCK */
+  .row {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+
+  .left-col img {
+    width: 340px;
+    border-radius: 14px;
+    border: 3px solid #f9d7a6;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  }
+
+  .right-col {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  /* Titles & text */
+  .title {
+    text-align: center;
+    font-size: 1.9rem;
+    margin-bottom: 8px;
+    color: #a15c00;
+  }
+
+  .one-para {
+    text-align: center;
+    font-size: 1.05rem;
+	font-weight: 600;
+    margin-top: 10px;
+  }
+
+  .trust-title {
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 25px 0 18px 0;
+    color: #a15c00;
+  }
+
+  .body-text {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+
+  .bank-info {
+    background: #fff7ec;
+    padding: 20px;
+    border-left: 6px solid #ffaf50;
+    border-radius: 12px;
+    margin-top: 25px;
+  }
+  .bank-info p {
+    margin: 6px 0;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 45px;
+    color: #8b6b3d;
+  }
+</style>
+
 </head>
 <body>
-  <div class="container">
-  
-	<div class="image-row">
-      <img src="A.png" alt="QR Code A">
-      <img src="B.png" alt="QR Code B">
-    </div>
-	
-    <h1>Aradhana and Arvind</h1>
-    <h2>With love and gratitude</h2>
 
-    <p>Your presence is our greatest gift.</p>
-    <p>We humbly request no gifts or bouquets. Should you wish to extend your love, we’d be grateful for your contribution towards a cause close to our hearts.</p>
+<div class="container">
 
-    
+  <!-- MONOGRAM -->
+  <!--div class="monogram">A & A</div-->
 
-    <h2>Niravi Public Charitable Trust</h2>
-    <p>Founded by <strong>Aradhana</strong> in 2019, <strong>Niravi</strong> works towards bridging inequities and empowering marginalised communities to thrive and lead change.</p>
-    <p>Over the years, Niravi has supported underprivileged rural schools with better infrastructure, provided ration and health support to tribal and slum communities, and led health awareness and Covid-19 relief efforts that reached over 5 lakh people across 15 cities in India through a network of 250 volunteers.</p>
-    <p>Going forward, Niravi aims to focus on sustainable rural education transformation — creating lasting impact by strengthening learning environments and community participation.</p>
-
-    <div class="trust-info">
-      <p><strong>Name:</strong> Niravi Public Charitable Trust</p>
-      <p><strong>Bank:</strong> ICICI Bank</p>
-      <p><strong>Branch:</strong> Puducherry IG square Branch</p>
-      <p><strong>Account No:</strong>623305035091</p>
-      <p><strong>IFSC:</strong> ICIC0006233</p>
-    </div>
-
-    <footer>© Niravi Public Charitable Trust – With gratitude and hope</footer>
+  <!-- A.png centered -->
+  <div class="top-image">
+    <img src="AA.JPG" alt="A-A">
   </div>
+	
+  <h1 class="title">Aradhana and Arvind</h1>
+  <p class="one-para">
+     Thank you for sharing your love and blessings with us, and for choosing to support a cause close to our hearts.
+  </p>
+    
+ <div class="divider"></div>
+ <h2 class="trust-title">Niravi Public Charitable Trust</h2>
+ 
+  <!-- TWO COLUMN BLOCK: B.png + ONE PARAGRAPH -->
+  <div class="row">
+		<div class="left-col">
+		  <img src="N.png" alt="Niravi">
+		</div>
+		<!-- Remaining text below -->
+		<div class="right-col">	
+			
+			<p class="body-text">
+				Founded by <strong>Aradhana</strong> in 2019, <strong>Niravi</strong> works towards bridging inequities and empowering marginalised communities to thrive and lead change.
+			</p>
+			<p class="body-text">
+				Over the years, Niravi has supported underprivileged rural schools with better infrastructure, provided ration and health support to tribal and slum communities and led health awareness and Covid-19 relief efforts that reached over 5 lakh people across 15 cities in India through a network of 250 volunteers.
+			</p>
+			<p class="body-text">
+				Going forward, Niravi aims to focus on sustainable rural education transformation — creating lasting impact by strengthening learning environments and community participation.
+			</p>	
+		</div>	
+	</div>
+ <div class="divider"></div>
+  <div class="bank-info">
+    <p><strong>Name :</strong> Niravi Public Charitable Trust</p>
+    <p><strong>Bank :</strong> ICICI Bank</p>
+    <p><strong>Branch :</strong> Puducherry IG square Branch</p>
+    <p><strong>A/c No :</strong> 623305035091</p>
+    <p><strong>IFSC :</strong> ICIC0006233</p>
+  </div>
+
+  <footer>© Niravi Public Charitable Trust – With gratitude and hope</footer>
+
+</div>
+
 </body>
 </html>
