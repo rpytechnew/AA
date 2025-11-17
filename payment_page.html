@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A and A – QR Code Details</title>
+
+<style>
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe5b4 0%, #ffd1a1 50%, #fff0dc 100%);
+    color: #3a2e1f;
+    margin: 0;
+    padding: 0;
+  }
+  
+    /* GOLD DIVIDER */
+  .divider {
+    height: 2px;
+    width: 70%;
+    margin: 25px auto;
+    background: linear-gradient(90deg, #d5a555, #f9e4b7, #d5a555);
+    border-radius: 2px;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffffffee;
+    border-radius: 18px;
+    border: 12px solid;
+    border-image: linear-gradient(135deg, #d9b777, #fae7c2, #d5a958) 1;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    position: relative;
+  }
+
+  /* A.png */
+  .top-image {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .top-image img {
+    width: 200px;
+    border-radius: 14px;
+    border: 3px solid #f9d7a6;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  }
+ 
+  /* TWO-COLUMN BLOCK */
+  .row {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+
+  .left-col img {
+    width: 340px;
+    border-radius: 14px;
+    border: 3px solid #f9d7a6;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  }
+
+  .right-col {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  /* Titles & text */
+  .title {
+    text-align: center;
+    font-size: 1.9rem;
+    margin-bottom: 8px;
+    color: #a15c00;
+  }
+
+  .one-para {
+    text-align: center;
+    font-size: 1.05rem;
+	font-weight: 600;
+    margin-top: 10px;
+  }
+
+  .trust-title {
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 25px 0 18px 0;
+    color: #a15c00;
+  }
+
+  .body-text {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+
+  .bank-info {
+    background: #fff7ec;
+    padding: 20px;
+    border-left: 6px solid #ffaf50;
+    border-radius: 12px;
+    margin-top: 25px;
+  }
+  .bank-info p {
+    margin: 6px 0;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 45px;
+    color: #8b6b3d;
+  }
+  
+  
+  
+  
+ 
+  /* row with B.png and paragraph */
+  /*
+  .intro-row {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .intro-row img {
+    width: 220px;
+    border-radius: 12px;
+    border: 3px solid rgba(249,215,166,0.9);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+  }
+
+  .intro-text {
+    flex: 1;
+    min-width: 240px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #a15c00;
+    font-size: 1.8rem;
+    margin: 10px 0;
+  }
+  */
+  
+  /* two-column layout */
+  .two-col {
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .col {
+    flex: 1;
+    min-width: 260px;
+  }
+
+  .box {
+    background: #fffaf0;
+    border-radius: 14px;
+    border: 6px solid;
+    border-image: linear-gradient(135deg, #d9b777, #fae7c2, #d5a958) 1;
+    padding: 26px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+    min-height: 250px; /* ensures equal top alignment */
+  }
+
+  .box-title {
+    text-align: center;
+    color: #a15c00;
+    font-family: Georgia, serif;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  /* SAME ROW FORM FIELDS */
+  .form-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+  }
+
+  .label {
+    width: 140px;
+    font-weight: 600;
+    color: #6d4510;
+  }
+
+  .input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #e3c989;
+    background: #fffdf7;
+    font-size: 1rem;
+  }
+
+  .phone-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+  }
+
+  .cc {
+    background: #f2e5c4;
+    border: 2px solid #e3c989;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #7b4d00;
+  }
+
+.bank-details-table {
+  margin-top: 10px;
+}
+
+.bd-row {
+  display: flex;
+  margin: 6px 0;
+  font-size: 1.05rem;
+  color: #4b3620;
+}
+
+.bd-label {
+  width: 130px;   /* keeps labels aligned vertically */
+  font-weight: 600;
+}
+
+.bd-colon {
+  width: 10px;    /* ensures colon is aligned */
+}
+
+.bd-value {
+  flex: 1;
+}
+
+
+  .btn {
+    margin-top: 18px;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #d9b777, #bb8c39);
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  /* mobile */
+  @media (max-width: 520px) {
+    .form-row { flex-direction: column; align-items: flex-start; }
+    .label { width: 100%; }
+    .phone-row { width: 100%; }
+  }
+
+  footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #8b6b3d;
+    font-size: 0.95rem;
+  }
+</style>
+</head>
+
+<body>
+<div class="container">
+<!-- A.png centered -->
+  <div class="top-image">
+    <img src="AA.JPG" alt="A-A">
+  </div>
+	
+  <h1 class="title">Aradhana and Arvind</h1>
+  <p class="one-para">
+     Thank you for sharing your love and blessings with us, and for choosing to support a cause close to our hearts.
+  </p>
+    
+ <div class="divider"></div>
+ 
+ <h2 class="trust-title">Niravi Public Charitable Trust</h2>
+ 
+  <!-- TWO COLUMN BLOCK: B.png + ONE PARAGRAPH -->
+  <div class="row">
+		<div class="left-col">
+		  <img src="N.JPG" alt="Niravi">
+		</div>
+		<!-- Remaining text below -->
+		<div class="right-col">	
+			
+			<p class="body-text">
+				Founded by <strong>Aradhana</strong> in 2019, <strong>Niravi</strong> works towards bridging inequities and empowering marginalised communities to thrive and lead change.
+			</p>
+			<p class="body-text">
+				Over the years, Niravi has supported underprivileged rural schools with better infrastructure, provided ration and health support to tribal and slum communities and led health awareness and Covid-19 relief efforts that reached over 5 lakh people across 15 cities in India through a network of 250 volunteers.
+			</p>
+			<p class="body-text">
+				Going forward, Niravi aims to focus on sustainable rural education transformation — creating lasting impact by strengthening learning environments and community participation.
+			</p>	
+		</div>	
+	</div>
+	
+ <div class="divider"></div>
+  <!-- 2 Columns -->
+  <div class="two-col">
+
+    <!-- LEFT: BANK DETAILS -->
+    <div class="col">
+      <div class="box">
+        <div class="box-title">Bank Details</div>        	
+		<div class="bank-details-table">
+		  <div class="bd-row">
+			<span class="bd-label">Name</span>
+			<span class="bd-colon">:</span>
+			<span class="bd-value">Niravi Public Charitable Trust</span>
+		  </div>
+
+		  <div class="bd-row">
+			<span class="bd-label">Bank</span>
+			<span class="bd-colon">:</span>
+			<span class="bd-value">ICICI Bank</span>
+		  </div>
+
+		  <div class="bd-row">
+			<span class="bd-label">Branch</span>
+			<span class="bd-colon">:</span>
+			<span class="bd-value">Puducherry IG square Branch</span>
+		  </div>
+
+		  <div class="bd-row">
+			<span class="bd-label">Account No</span>
+			<span class="bd-colon">:</span>
+			<span class="bd-value">623305035091</span>
+		  </div>
+
+		  <div class="bd-row">
+			<span class="bd-label">IFSC</span>
+			<span class="bd-colon">:</span>
+			<span class="bd-value">ICIC0006233</span>
+		  </div>
+</div>
+
+		
+		
+		
+      </div>
+    </div>
+
+    <!-- RIGHT: USER DETAILS FORM -->
+    <div class="col">
+      <div class="box">
+        <div class="box-title">Your Details</div>
+
+        <form id="guestForm">
+
+          <!-- NAME ROW -->
+          <div class="form-row">
+            <label class="label">Name</label>
+            <input id="name" class="input" type="text" maxlength="50"
+              oninput="this.value=this.value.replace(/[^A-Za-z ]/g,'');"
+              placeholder="Enter your full name" required>
+          </div>
+
+          <!-- PHONE ROW -->
+          <div class="form-row">
+            <label class="label">Mobile Number</label>
+            <div class="phone-row">
+              <div class="cc">+91</div>
+              <input id="phone" class="input" type="text" maxlength="10"
+                oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                placeholder="10-digit number" required>
+            </div>
+          </div>
+
+          <button class="btn" type="submit">Submit</button>
+          <div id="msg" style="text-align:center;margin-top:10px;color:green;font-weight:600"></div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer>© Niravi Public Charitable Trust – With gratitude and hope</footer>
+</div>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script>
+ const firebaseConfig = {
+  apiKey: "AIzaSyADciC7ZJ2UgldIPkFtntRlBKR4lv5MO54",
+  authDomain: "aa-guest-register.firebaseapp.com",
+  projectId: "aa-guest-register",
+  storageBucket: "aa-guest-register.firebasestorage.app",
+  messagingSenderId: "334745484222",
+  appId: "1:334745484222:web:4179ef8d837d25afce17ef"
+};
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+
+<!-- Submit Logic -->
+<script>
+document.getElementById("guestForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const nameEl = document.getElementById("name");
+  const phoneEl = document.getElementById("phone");
+
+  const name = nameEl.value.trim();
+  const phone = phoneEl.value.trim();
+
+  if (name.length < 3) return alert("Enter a valid name (min 3 chars)");
+  if (phone.length !== 10) return alert("Enter valid 10-digit phone");
+
+  const fullPhone = "+91" + phone;
+
+  nameEl.disabled = true;
+  phoneEl.disabled = true;
+  const btn = document.querySelector(".btn");
+  btn.disabled = true;
+  btn.innerText = "Submitting...";
+
+  try {
+    await db.collection("guests").doc(fullPhone).set({
+      name: name,
+      phone: fullPhone,
+      ts: new Date()
+    });
+
+    window.location.href = "thankyou.html";
+
+  } catch(err) {
+    alert("This mobile number is already registered.");
+    nameEl.disabled = false;
+    phoneEl.disabled = false;
+    btn.disabled = false;
+    btn.innerText = "Submit";
+  }
+});
+</script>
+
+</body>
+</html>
